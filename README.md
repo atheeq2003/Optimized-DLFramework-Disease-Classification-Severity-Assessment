@@ -7,10 +7,6 @@
 
 An advanced deep learning framework designed for accurate multi-class lung disease diagnosis and severity assessment using Chest X-ray (CXR) images. This project integrates optimized CNNs, feature fusion, and machine learning to deliver high-performance results for clinical applications.
 
-## 🌐Deployed App
-
-[➡️ ](https://atheeq2003-movie-recommender.streamlit.app/)**[Explore the Deployed App Here](https://atheeq2003-movie-recommender.streamlit.app/)**
-
 ## 🌟 Key Features
 
 - **Multi-Class Lung Disease Diagnosis**: Classifies CXR images into **COVID-19, Tuberculosis, Viral Pneumonia, and Normal** cases.
