@@ -7,6 +7,10 @@
 
 An advanced deep learning framework designed for accurate multi-class lung disease diagnosis and severity assessment using Chest X-ray (CXR) images. This project integrates optimized CNNs, feature fusion, and machine learning to deliver high-performance results for clinical applications.
 
+## 🌐Deployed App
+
+[➡️ ](https://atheeq2003-movie-recommender.streamlit.app/)**[Explore the Deployed App Here](https://atheeq2003-movie-recommender.streamlit.app/)**
+
 ## 🌟 Key Features
 
 - **Multi-Class Lung Disease Diagnosis**: Classifies CXR images into **COVID-19, Tuberculosis, Viral Pneumonia, and Normal** cases.
@@ -23,7 +27,8 @@ An advanced deep learning framework designed for accurate multi-class lung disea
 3. **Feature Fusion**: Combines features for a unified representation.
 4. **Classification**: **Softmax classifier** for disease prediction.
 5. **Severity Assessment**: **O-ELM** for grading disease severity.
-   ![1748079909861](image/README/1748079909861.png)
+
+![1748079909861](image/README/1748079909861.png)
 
 ## 🖥️ Streamlit Web Application
 
