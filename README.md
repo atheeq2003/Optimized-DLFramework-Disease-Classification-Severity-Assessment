@@ -1,4 +1,4 @@
-# 🏥 Optimized Deep Learning Framework for Multi-Class Lung Disease Diagnosis
+# 🏥 Optimized Deep Learning Framework for Multi-Class Lung Disease Diagnosis and Severity Assessment
 
 ![Lung Disease Diagnosis](https://img.shields.io/badge/Application-Medical%20Diagnosis-blue)
 ![Deep Learning](https://img.shields.io/badge/Framework-Deep%20Learning-green)
