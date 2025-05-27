@@ -182,9 +182,9 @@ def main():
                 mask, segmented_image = segment_lungs(image, segmentation_model)
 
             col1, col2, col3, col4 = st.columns(4)
-            col1.image(image, caption="Input Image", use_column_width=True)
-            col2.image(mask * 255, caption="Lung Mask", use_column_width=True)
-            col3.image(segmented_image, caption="Segmented Image", use_column_width=True)
+            col1.image(image, caption="Input Image", use_container_width=True)
+            col2.image(mask * 255, caption="Lung Mask", use_container_width=True)
+            col3.image(segmented_image, caption="Segmented Image", use_container_width=True)
 
             with st.spinner("Predicting Disease..."):
                 st.session_state.disease_prediction = predict_disease(
@@ -217,14 +217,14 @@ def main():
 
         if uploaded_file:
             image = load_image(uploaded_file)
-            col1.image(image, caption="Uploaded Image", use_column_width=True)
+            col1.image(image, caption="Uploaded Image", use_container_width=True)
             col2.empty()
         elif severity_sample != "Select":
             sample_path = severity_samples.get(severity_sample)
             image = cv2.imread(sample_path)
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-            col1.image(image, caption=f"Sample: {severity_sample}", use_column_width=True)
-            col2.image(image, caption="Input Image", use_column_width=True)
+            col1.image(image, caption=f"Sample: {severity_sample}", use_container_width=True)
+            col2.image(image, caption="Input Image", use_container_width=True)
         else:
             col1.empty()
             col2.empty()
