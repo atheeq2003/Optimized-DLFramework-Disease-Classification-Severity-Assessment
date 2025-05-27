@@ -13,7 +13,7 @@ from tensorflow.keras.applications.efficientnet_v2 import preprocess_input
 
 # ---------------------- GitHub Download Helper ----------------------
 def download_file_from_github(tag, filename, subfolder=""):
-    base_url = f"https://github.com/atheeq2003/Optimized-DLFramework-Disease-Classification-Severity-Assessment/releases"
+    base_url = f"https://github.com/atheeq2003/Optimized-DLFramework-Disease-Classification-Severity-Assessment/releases/download"
     url = f"{base_url}/{tag}/{filename}"
     local_path = os.path.join("downloads", subfolder, filename)
     os.makedirs(os.path.dirname(local_path), exist_ok=True)
