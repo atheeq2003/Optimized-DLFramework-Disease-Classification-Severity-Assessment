@@ -7,6 +7,14 @@
 
 An advanced deep learning framework designed for accurate multi-class lung disease diagnosis and severity assessment using Chest X-ray (CXR) images. This project integrates optimized CNNs, feature fusion, and machine learning to deliver high-performance results for clinical applications.
 
+---
+
+## 🌐Deployed App
+
+[➡️ ]([https://atheeq2003-movie-recommender.streamlit.app/](https://atheeq2003-disease-classification-severity-assessment.streamlit.app/))**[Explore the Deployed App Here]([https://atheeq2003-movie-recommender.streamlit.app/](https://atheeq2003-disease-classification-severity-assessment.streamlit.app/))**
+
+---
+
 ## 🌟 Key Features
 
 - **Multi-Class Lung Disease Diagnosis**: Classifies CXR images into **COVID-19, Tuberculosis, Viral Pneumonia, and Normal** cases.
@@ -15,6 +23,8 @@ An advanced deep learning framework designed for accurate multi-class lung disea
 - **Hybrid Feature Fusion**: Combines **deep features (EfficientNetV2-L)** with **handcrafted features (GLCM, HOG, Wavelet)** for robust performance.
 - **Optimized Training**: Enhanced with **Parrot Optimizer (PO)** and **Imperialist Competitive Algorithm (ICA)** for efficient model convergence.
 - **High Accuracy**: Achieves **90.58% classification accuracy** and **80.67% severity assessment accuracy**.
+
+---
 
 ## 🛠️ System Architecture
 
@@ -25,6 +35,8 @@ An advanced deep learning framework designed for accurate multi-class lung disea
 5. **Severity Assessment**: **O-ELM** for grading disease severity.
 
 ![1748079909861](image/README/1748079909861.png)
+
+---
 
 ## 🖥️ Streamlit Web Application
 
@@ -39,12 +51,16 @@ The framework includes an interactive web interface built with Streamlit that al
 
    ![1748078794456](image/README/1748078794456.png)
 
+---
+
 ### UI Features:
 
 - Real-time image processing
 - Visual segmentation results
 - Clear prediction outputs
 - Responsive design
+
+---
 
 ## 📊 Performance Highlights
 
