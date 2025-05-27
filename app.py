@@ -6,7 +6,6 @@ import tensorflow as tf
 import joblib
 import streamlit as st
 import requests
-import libgl1
 from tensorflow.keras.applications import EfficientNetV2L
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
