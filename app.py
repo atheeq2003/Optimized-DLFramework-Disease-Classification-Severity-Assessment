@@ -13,7 +13,7 @@ from tensorflow.keras.applications.efficientnet_v2 import preprocess_input
 
 # ---------------------- GitHub Download Helper ----------------------
 def download_file_from_github(tag, filename, subfolder=""):
-    base_url = f"https://github.com/atheeq2003/Optimized-DLFramework-Disease-Classification-Severity-Assessment/releases/download/files"
+    base_url = f"https://github.com/atheeq2003/Optimized-DLFramework-Disease-Classification-Severity-Assessment/releases"
     url = f"{base_url}/{tag}/{filename}"
     local_path = os.path.join("downloads", subfolder, filename)
     os.makedirs(os.path.dirname(local_path), exist_ok=True)
@@ -31,7 +31,7 @@ st.set_page_config(page_title="Lung Disease & Severity Classification", layout="
 # ---------------------- Load Models ----------------------
 @st.cache_resource
 def load_segmentation_model():
-    model_path = download_file_from_github("segmentation-model", "multiresunet_lung_segmentation.h5", "segmenter/")
+    model_path = download_file_from_github("segmentation-model", "multiresunet_lung_segmentation.h5")
     return load_model(model_path, custom_objects={
         'dice_coefficient': lambda y_true, y_pred: 2 * np.sum(y_true * y_pred) / (np.sum(y_true) + np.sum(y_pred) + 1e-6),
         'jaccard_index': lambda y_true, y_pred: np.sum(y_true * y_pred) / (np.sum(y_true) + np.sum(y_pred) - np.sum(y_true * y_pred) + 1e-6)
@@ -39,16 +39,16 @@ def load_segmentation_model():
 
 @st.cache_resource
 def load_classification_models():
-    clf = joblib.load(download_file_from_github("disease_classification_models", "softmax_classifier_New.pkl", "models/"))
-    scaler = joblib.load(download_file_from_github("disease_classification_models", "feature_scaler_New.pkl", "models/"))
-    encoder = joblib.load(download_file_from_github("disease_classification_models", "label_encoder_New.pkl", "models/"))
+    clf = joblib.load(download_file_from_github("disease_classification_models", "softmax_classifier_New.pkl"))
+    scaler = joblib.load(download_file_from_github("disease_classification_models", "feature_scaler_New.pkl"))
+    encoder = joblib.load(download_file_from_github("disease_classification_models", "label_encoder_New.pkl"))
     return clf, scaler, encoder
 
 @st.cache_resource
 def load_severity_models():
-    cnn_model = load_model(download_file_from_github("severity_assessment_models", "cnn_feature_extractor.h5", "models/severity/"))
-    elm_weights = np.load(download_file_from_github("severity_assessment_models", "elm_weights.npz", "models/severity/"))
-    label_encoder = joblib.load(download_file_from_github("severity_assessment_models", "label_encoder.pkl", "models/severity/"))
+    cnn_model = load_model(download_file_from_github("severity_assessment_models", "cnn_feature_extractor.h5"))
+    elm_weights = np.load(download_file_from_github("severity_assessment_models", "elm_weights.npz"))
+    label_encoder = joblib.load(download_file_from_github("severity_assessment_models", "label_encoder.pkl"))
     return cnn_model, elm_weights, label_encoder
 
 @st.cache_resource
@@ -134,20 +134,20 @@ def main():
     cnn_model, elm, severity_label_encoder = load_severity_models()
     extractor = load_feature_extractor()
 
-    hog_test_csv = download_file_from_github("csv_files", "hog_features_test.csv", "handcrafted_features/")
-    glcm_test_csv = download_file_from_github("csv_files", "glcm_features_test.csv", "handcrafted_features/")
+    hog_test_csv = download_file_from_github("csv_files", "hog_features_test.csv")
+    glcm_test_csv = download_file_from_github("csv_files", "glcm_features_test.csv")
 
     disease_samples = {
-        "COVID-19": download_file_from_github("sample-images-diseases", "img_38.png", "sample_images_disease/"),
-        "Tuberculosis": download_file_from_github("sample-images-diseases", "img_12.png", "sample_images_disease/"),
-        "Viral Pneumonia": download_file_from_github("sample-images-diseases", "img_400.png", "sample_images_disease/"),
-        "Normal": download_file_from_github("sample-images-diseases", "img_144.png", "sample_images_disease/")
+        "COVID-19": download_file_from_github("sample-images-diseases", "img_38.png"),
+        "Tuberculosis": download_file_from_github("sample-images-diseases", "img_12.png"),
+        "Viral Pneumonia": download_file_from_github("sample-images-diseases", "img_400.png"),
+        "Normal": download_file_from_github("sample-images-diseases", "img_144.png")
     }
 
     severity_samples = {
-        "COVID-19 (Mild)": download_file_from_github("sample-images-severity", "img_384.png", "sample_images_severity/"),
-        "COVID-19 (Moderate)": download_file_from_github("sample-images-severity", "img_137.png", "sample_images_severity/"),
-        "COVID-19 (Severe)": download_file_from_github("sample-images-severity", "835897948125275878.png", "sample_images_severity/")
+        "COVID-19 (Mild)": download_file_from_github("sample-images-severity", "img_384.png"),
+        "COVID-19 (Moderate)": download_file_from_github("sample-images-severity", "img_137.png"),
+        "COVID-19 (Severe)": download_file_from_github("sample-images-severity", "835897948125275878.png")
     }
 
     tab1, tab2 = st.tabs(["🧬 Disease Prediction", "📊 COVID-19 Severity Prediction"])
