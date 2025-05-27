@@ -11,7 +11,7 @@ An advanced deep learning framework designed for accurate multi-class lung disea
 
 ## 🌐Deployed App
 
-[➡️ ]([https://atheeq2003-movie-recommender.streamlit.app/](https://atheeq2003-disease-classification-severity-assessment.streamlit.app/))**[Explore the Deployed App Here]([https://atheeq2003-movie-recommender.streamlit.app/](https://atheeq2003-disease-classification-severity-assessment.streamlit.app/))**
+[➡️ ](https://atheeq2003-disease-classification-severity-assessment.streamlit.app/)**[Explore the Deployed App Here]((https://atheeq2003-disease-classification-severity-assessment.streamlit.app/))**
 
 ---
 
